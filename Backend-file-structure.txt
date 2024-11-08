@@ -1,0 +1,31 @@
+real-time-chat-app/
+├── /controllers/                 # Business logic
+│   ├── authController.js         # Cognito token verification and user management (optional)
+│   ├── chatController.js         # Chat logic using DynamoDB
+│   └── neptuneController.js      # Interactions with AWS Neptune for user relationships
+│
+├── /middlewares/                 # Middleware for JWT token authentication
+│   └── auth.js                   # AWS Cognito JWT token verification
+│
+├── /models/                      # AWS SDK connections
+│   ├── dynamoDB.js               # DynamoDB configuration
+│   └── neptune.js                # Neptune configuration
+│
+├── /public/                      # Frontend HTML files for chat
+│   ├── publicChat.html           # Public chat HTML interface
+│   └── privateChat.html          # Private chat HTML interface
+│
+├── /routes/                      # API routes for handling chat and user requests
+│   ├── chatRoutes.js             # Chat-related routes
+│   └── userRoutes.js             # User-related routes (optional)
+│
+├── /config/                      # AWS Configuration
+│   └── awsConfig.js              # AWS SDK configuration and environment setup
+│
+├── .env                          # Environment variables (AWS keys, Cognito pool ID, etc.)
+├── .gitignore                    # Git ignore file
+├── Dockerfile                    # Docker configuration for containerizing the app
+├── package.json                  # Node.js dependencies and scripts
+├── README.md                     # Project documentation
+├── server.js                     # Main server entry point
+└── node_modules/                 # Node.js dependencies
